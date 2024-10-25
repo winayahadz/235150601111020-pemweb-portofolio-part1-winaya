@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: HeyComic;
+  src: url(Bodo\ Amat.ttf);
+}
+
+.content .quotes {
+  font-family: "Poppins", system-ui;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+nav {
+  font-family: "Poppins", system-ui;
+  font-size: 16px;
+  display: flex;
+  background-color: rgb(205, 228, 255);
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 58px;
+  width: 100%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li a.aktif {
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#nav-links {
+  display: flex;
+}
+
+.logo {
+  font-family: "Poppins", system-ui;
+  font-weight: 600;
+}
+
+.content {
+  font-family: "Poppins", system-ui;
+  text-align: center;
+  height: calc(100vh - 116px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.content .about_kiri {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.content .about_kanan {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  font-size: 20px;
+}
+
+.content .about_kanan .kartu {
+  background-color: #fff4dc;
+  padding: 10px 30px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.content .about_kanan .kartu h1 {
+  margin-bottom: 10px;
+}
+
+.content .about_kanan table td {
+  text-align: start;
+}
+
+.content .about_kanan table .row {
+  padding-right: 50px;
+}
+
+.content .bunga {
+  width: 120px;
+  position: absolute;
+  bottom: -40px;
+  right: -20px;
+}
+
+.content #winaya {
+  width: 250px;
+}
+
+
+
+.saya {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.card {
+  width: 50%;
+  font-family: "Poppins", system-ui;
+  height: 180px;
+  margin: 30px;
+  background: #fff4dc;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(205, 228, 255);
+  border-radius: 15px;
+  box-shadow: -20px 20px 0px -5px rgb(205, 228, 255);
+}
+.card__tags {
+  overflow: hidden;
+  height: 80%;
+}
+.title {
+  font-weight: 900;
+  font-size: 1.7em;
+  color: #000;
+  text-align: center;
+  width: 100%;
+}
+
+.tag__name {
+  display: inline-block;
+  color: #000;
+  font-size: 1.1em;
+  background-color: rgb(205, 228, 255);
+  padding: 6px 23px 9px;
+  border-radius: 70em;
+  margin: 8px 6px 8px 0;
+  margin-left: 0px;
+  position: relative;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.tag__name::before,
+.tag__name::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff4dc;
+}
+
+.tag__name::before {
+  left: 7px;
+}
+
+.tag__name::after {
+  right: 7px;
+}
+
+.tag__name:hover {
+  transform: scale(1.1);
+  background-color: #da7fb4;
+}
+
+.no-scrollbar {
+  overflow-y: hidden;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+
+footer {
+  font-family: "Poppins", system-ui;
+  text-align: center;
+  background-color: rgb(205, 228, 255);
+  padding: 20px 0px;
+  height: 58px;
+  width: 100%;
+}
+
+/* untuk tablet */
+@media (max-width: 1240px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* untuk mobile */
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+
+  nav ul {
+    gap: 0;
+  }
+
+  .skill {
+    width: 100%;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  #nav-links {
+    
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #e6f8ff;
+    z-index: 999;
+  }
+
+  #nav-links li {
+    margin: 0;
+    padding: 20px 0px;
+    text-align: center;
+  }
+
+  #nav-links li:hover {
+    background-color: #73a2aa;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+  footer {
+    position: relative;
+    bottom: 0;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 100vh;
+    gap: 0px;
+  }
+
+  .content .about_kiri {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+  }
+
+  .content .about_kiri #winaya {
+    width: 200px;
+  }
+
+  .content .about_kanan {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    margin-top: 10px;
+  }
+
+  .content .about_kanan .kartu {
+    width: 95%;
+  }
+
+  .content .about_kanan .kartu h1 {
+    font-size: 30px;
+  }
+
+  .content .about_kanan .kartu table {
+    font-size: 12px;
+  }
+
+  .content .about_kanan table .row {
+    padding-right: 10px;
+  }
+
+  .content .bunga {
+    width: 60px;
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+  }
+}

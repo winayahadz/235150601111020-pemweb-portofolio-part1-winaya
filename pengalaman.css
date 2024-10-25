@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.content .quotes {
+    font-family: "Poppins", system-ui;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+nav {
+    font-family: "Poppins", system-ui;
+    font-size: 16px;
+    display: flex;
+    background-color: rgb(205, 228, 255);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 58px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a.aktif {
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#nav-links {
+  display: flex;
+}
+
+.logo {
+    font-family: "Poppins", system-ui;
+    font-weight: 600;
+}
+
+.content {
+    text-align: center;
+    height: calc(100vh - 116px); 
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1{
+    font-family: "Poppins", system-ui;
+}
+
+.content-card {
+    font-family: "Poppins", system-ui;
+    display: grid;
+    gap: 10px;
+    
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;    
+    align-items: center;
+}
+
+/* From Uiverse.io by gharsh11032000 */ 
+.card {
+    position: relative;
+    width: 300px;
+    margin: 10px 20px;
+    height: 200px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card img {
+    width: 300px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .card:hover svg {
+    scale: 0;
+  }
+  
+  .card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+    text-align: justify;
+  }
+  
+
+footer {
+    font-family: "Poppins", system-ui;
+    text-align: center;
+    background-color: rgb(205, 228, 255);
+    padding: 20px 0px;
+    height: 58px;
+}
+
+
+@media (max-width: 1440px) {
+
+}
+  @media (max-width: 768px) {
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+    }
+    
+    nav ul {
+      gap: 0;
+    }
+    
+      #nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #e6f8ff;
+        z-index: 999;
+    }
+    
+    
+    #nav-links li {
+      margin: 0;
+      padding: 20px 0px;
+      text-align: center;
+    }
+    
+    #nav-links li:hover {
+      background-color: #73a2aa;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    #nav-links.show {
+      display: flex;
+    }
+    
+    .content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 70px;
+      padding-bottom: 50px;
+    }
+
+    .content-card {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .content .content-card:first-of-type {
+      order: 1;
+    }
+
+    .content .title {
+      order: 0;
+    }
+
+    .content .content-card:last-of-type {
+      order: 2;
+    }
+  }
